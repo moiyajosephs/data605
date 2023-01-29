@@ -1,0 +1,41 @@
+---
+title: "Week1 Discussion"
+author: "Moiya Josephs"
+date: "2023-01-29"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Week 1 Discussion
+
+Chapter M Exercise C11 page 172
+
+## The Problem
+Solve the given vector equation for x, or explain why no solution exists.
+
+```{r}
+knitr::include_graphics("ProblemC11.png")
+```
+
+Where the first matrix is `matrix1`, the answer in this problem is `matrix2` and the second matrix is what we are going to solve for and is named `answer`.
+
+```{r}
+matrix1 <- matrix(c(1,0,2,4,3,2), nrow = 2)
+print(matrix1)
+
+matrix2 <- matrix(c(-1,0,1,5,0,-2), nrow = 2)
+print(matrix2)
+
+answer<- (2*matrix1 - matrix2)/3
+answer
+
+```
+
+## Checking the math
+```{r}
+2*matrix1 -3*answer
+```
+The `answer` matrix where `x=2` when substituted into the initial equation gave the same resulting matrix.
